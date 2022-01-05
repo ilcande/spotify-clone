@@ -3,9 +3,9 @@ import {
   SearchIcon,
   LibraryIcon,
   PlusCircleIcon,
-  HeartIcon,
   RssIcon
 } from "@heroicons/react/outline";
+import { HeartIcon } from "@heroicons/react/solid";
 import { playlistIdState } from "../atoms/playlistAtom";
 import { signOut, useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
@@ -31,7 +31,7 @@ function Sidebar() {
   console.log(playlists);
 
   return (
-    <div className="text-gray-500 p-5 text-sm lg:text-sm border-r border-gray-900 overflow-y-scroll h-screen sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex">
+    <div className="text-gray-500 p-5 text-sm lg:text-sm border-r border-gray-900 overflow-y-scroll h-screen sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex pb-36">
       <div className="space-y-4">
         <button className="flex items-center space-x-2 hover:text-white">
           <HomeIcon className="h-5 w-5" />
@@ -53,11 +53,11 @@ function Sidebar() {
           <p>Create Playlist</p>
         </button>
         <button className="flex items-center space-x-2 hover:text-white">
-          <HeartIcon className="h-5 w-5" />
+          <HeartIcon className="h-5 w-5 text-blue-500" />
           <p>Liked Songs</p>
         </button>
         <button className="flex items-center space-x-2 hover:text-white">
-          <RssIcon className="h-5 w-5" />
+          <RssIcon className="h-5 w-5 text-green-500" />
           <p>Your Episodes</p>
         </button>
 
